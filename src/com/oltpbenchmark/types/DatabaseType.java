@@ -48,7 +48,12 @@ public enum DatabaseType {
     MONETDB("nl.cwi.monetdb.jdbc.MonetDriver", false, false),
     NUODB("com.nuodb.jdbc.Driver", true, false),
     TIMESTEN("com.timesten.jdbc.TimesTenDriver", true, false),
-    PELOTON("org.postgresql.Driver", false, false)
+    PELOTON("org.postgresql.Driver", false, false),
+    /**
+     * TODO Discuss if we need changes to the two params below.
+     * Using the default configuration as specified in the write-up for now.
+     */
+    VOLTDB("org.voltdb.jdbc.Driver", true, false),
     ;
     
     private DatabaseType(String driver, boolean escapeNames, boolean includeColNames) {
